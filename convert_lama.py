@@ -30,6 +30,7 @@ coreml_model = ct.convert(
     convert_to="mlprogram",
     compute_precision=ct.precision.FLOAT32,
     compute_units=ct.ComputeUnit.CPU_AND_GPU,
+    minimum_deployment_target=ct.target.iOS18,
     inputs=[
         ct.ImageType(name="image",
                      shape=image_shape,
